@@ -13,9 +13,9 @@ document.addEventListener("keydown", function(event) {
   btnAnimation(event.key);
 });
 
-document.addEventListener("touchstart", function (event) {
-  makesound(event.key);
-  btnAnimation(event.key);
+document.querySelector("button").addEventListener("ontouchstart", function () {
+  makesound(this.innerHTML);
+  btnAnimation(this.innerHTML);
 });
 
 function makesound(key) {
