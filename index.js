@@ -1,14 +1,19 @@
 var noOfDrumButton = document.querySelectorAll(".drum").length;
 
-for (var i = 0; i < noOfDrumButton; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-    var buttonInnerHTML = this.innerHTML;
-    makesound(buttonInnerHTML);
-    btnAnimation(buttonInnerHTML);
-  });
-}
+// for (var i = 0; i < noOfDrumButton; i++) {
+//   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+//     var buttonInnerHTML = this.innerHTML;
+//     makesound(buttonInnerHTML);
+//     btnAnimation(buttonInnerHTML);
+//   });
+// }
 
 document.addEventListener("keydown", function(event) {
+  makesound(event.key);
+  btnAnimation(event.key);
+});
+
+document.addEventListener("ontouchstart", function (event) {
   makesound(event.key);
   btnAnimation(event.key);
 });
