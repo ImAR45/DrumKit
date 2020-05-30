@@ -13,10 +13,12 @@ document.addEventListener("keydown", function(event) {
   btnAnimation(event.key);
 });
 
-document.querySelector("button").addEventListener("touchstart", function () {
-  makesound(this.innerHTML);
-  btnAnimation(this.innerHTML);
-});
+for (var i = 0; i < noOfDrumButton; i++) {
+  document.querySelector(".drum")[i].addEventListener("touchstart", function () {
+    makesound(this.innerHTML);
+    btnAnimation(this.innerHTML);
+  });
+}
 
 function makesound(key) {
   switch (key) {
