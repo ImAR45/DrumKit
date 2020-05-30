@@ -14,7 +14,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 for (var i = 0; i < noOfDrumButton; i++) {
-  document.querySelector(".drum")[i].addEventListener("touchstart", function () {
+  document.querySelectorAll(".drum")[i].addEventListener("touchstart", function () {
     makesound(this.innerHTML);
     btnAnimation(this.innerHTML);
   });
