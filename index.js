@@ -13,7 +13,7 @@ document.addEventListener("keydown", function(event) {
   btnAnimation(event.key);
 });
 
-document.addEventListener("ontouchstart", function (event) {
+document.addEventListener("touchstart", function (event) {
   makesound(event.key);
   btnAnimation(event.key);
 });
